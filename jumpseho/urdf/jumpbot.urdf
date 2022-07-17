@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot name="jumpbot">
+
+
+
+
+
+
+  <gazebo reference="imu_link">
+    <gravity>true</gravity>
+    <sensor name="imu_sensor" type="imu">
+      <always_on>true</always_on>
+      <update_rate>100</update_rate>
+      <visualize>true</visualize>
+      <topic>imu</topic>
+      <plugin filename="libgazebo_ros_imu_sensor.so" name="imu_plugin">
+        <topicName>imu</topicName>
+        <bodyName>imu_link</bodyName>
+        <updateRateHZ>100.0</updateRateHZ>
+        <!-- <gaussianNoise>0.0</gaussianNoise> -->
+        <xyzOffset>0 0 0</xyzOffset>
+        <rpyOffset>0 0 0</rpyOffset>
+        <frameName>imu_link</frameName>
+        <initialOrientationAsReference>false</initialOrientationAsReference>
+        <ros>
+          <namespace>/skidbot/imu</namespace>
+          <remapping>~/out:=data</remapping>
+        </ros>
+      </plugin>
+      <pose>0 0 0 0 0 0</pose>
+    </sensor>
+  </gazebo>
+
+
+
+
+
+
+
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0344807068757349 -1.65578947620149E-05 -0.138022807522675"
+        rpy="0 0 0" />
+      <mass
+        value="2.06580592931618" />
+      <inertia
+        ixx="0.00261911861179365"
+        ixy="4.15998954617939E-08"
+        ixz="0.000378047784803215"
+        iyy="0.00469510011317246"
+        iyz="-8.21950529021697E-09"
+        izz="0.00304926629325092" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://jumpseho/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://jumpseho/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="left_link">
+    <inertial>
+      <origin
+        xyz="-6.9389E-18 -0.019813 -5.5511E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.22927" />
+      <inertia
+        ixx="0.00029401"
+        ixy="-4.0767E-21"
+        ixz="-1.9921E-20"
+        iyy="0.00043465"
+        iyz="-5.0517E-21"
+        izz="0.00029401" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://jumpseho/meshes/left_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://jumpseho/meshes/left_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_joint"
+    type="continuous">
+    <origin
+      xyz="-0.028707 0.12398 -0.32783"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_link" />
+    <axis
+      xyz="2.6227E-05 1 -0.00026253" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="1"
+      velocity="1" />
+  </joint>
+  <link
+    name="right_link">
+    <inertial>
+      <origin
+        xyz="-1.1928E-14 0.019813 1.0436E-14"
+        rpy="0 0 0" />
+      <mass
+        value="0.22927" />
+      <inertia
+        ixx="0.00029401"
+        ixy="3.4207E-19"
+        ixz="-1.1511E-20"
+        iyy="0.00043465"
+        iyz="-1.3676E-19"
+        izz="0.00029401" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://jumpseho/meshes/right_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://jumpseho/meshes/right_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_join"
+    type="continuous">
+    <origin
+      xyz="-0.028714 -0.12402 -0.32777"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_link" />
+    <axis
+      xyz="2.6227E-05 1 -0.00026253" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="1"
+      velocity="1" />
+  </joint>
+</robot>

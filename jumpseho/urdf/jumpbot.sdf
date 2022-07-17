@@ -1,0 +1,330 @@
+<?xml version="1.0" ?>
+<sdf version='1.7'>
+  <model name='jumpbot'>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <link name='base_link'>
+      <inertial>
+        <pose>-0.034481 -1.7e-05 -0.138023 0 -0 0</pose>
+        <mass>2.06581</mass>
+        <inertia>
+          <ixx>0.00261912</ixx>
+          <ixy>4.15999e-08</ixy>
+          <ixz>0.000378048</ixz>
+          <iyy>0.0046951</iyy>
+          <iyz>-8.21951e-09</iyz>
+          <izz>0.00304927</izz>
+        </inertia>
+      </inertial>
+      <collision name='base_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/seho/ros2/test_ws/src/jumpseho/meshes/base_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+
+
+
+      <collision name='base_link_fixed_joint_lump__imu_link_collision_2'>
+              <pose>0 0 0.01 0 -0 0</pose>
+              <geometry>
+                <box>
+                  <size>0.005 0.005 0.005</size>
+                </box>
+              </geometry>
+              <surface>
+                <contact>
+                  <ode/>
+                </contact>
+                <friction>
+                  <ode/>
+                </friction>
+              </surface>
+            </collision>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <visual name='base_link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/seho/ros2/test_ws/src/jumpseho/meshes/base_link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+
+
+
+      <visual name='base_link_fixed_joint_lump__imu_link_visual_2'>
+              <pose>0 0 0.01 0 -0 0</pose>
+              <geometry>
+                <box>
+                  <size>0.005 0.005 0.005</size>
+                </box>
+              </geometry>
+            </visual>
+
+
+      <sensor name='imu_sensor' type='imu'>
+              <plugin name='imu_plugin' filename='libgazebo_ros_imu_sensor.so'>
+                <ros>
+                  <namespace>/demo</namespace>
+                  <remapping>~/out:=imu</remapping>
+                </ros>
+                <initial_orientation_as_reference>0</initial_orientation_as_reference>
+              </plugin>
+              <always_on>1</always_on>
+              <update_rate>10</update_rate>
+              <visualize>1</visualize>
+              <imu>
+                <angular_velocity>
+                  <x>
+                    <noise type='gaussian'>
+                      <mean>0</mean>
+                      <stddev>0.0002</stddev>
+                      <bias_mean>7.5e-06</bias_mean>
+                      <bias_stddev>8e-07</bias_stddev>
+                    </noise>
+                  </x>
+                  <y>
+                    <noise type='gaussian'>
+                      <mean>0</mean>
+                      <stddev>0.0002</stddev>
+                      <bias_mean>7.5e-06</bias_mean>
+                      <bias_stddev>8e-07</bias_stddev>
+                    </noise>
+                  </y>
+                  <z>
+                    <noise type='gaussian'>
+                      <mean>0</mean>
+                      <stddev>0.0002</stddev>
+                      <bias_mean>7.5e-06</bias_mean>
+                      <bias_stddev>8e-07</bias_stddev>
+                    </noise>
+                  </z>
+                </angular_velocity>
+                <linear_acceleration>
+                  <x>
+                    <noise type='gaussian'>
+                      <mean>0</mean>
+                      <stddev>0.017</stddev>
+                      <bias_mean>0.1</bias_mean>
+                      <bias_stddev>0.001</bias_stddev>
+                    </noise>
+                  </x>
+                  <y>
+                    <noise type='gaussian'>
+                      <mean>0</mean>
+                      <stddev>0.017</stddev>
+                      <bias_mean>0.1</bias_mean>
+                      <bias_stddev>0.001</bias_stddev>
+                    </noise>
+                  </y>
+                  <z>
+                    <noise type='gaussian'>
+                      <mean>0</mean>
+                      <stddev>0.017</stddev>
+                      <bias_mean>0.1</bias_mean>
+                      <bias_stddev>0.001</bias_stddev>
+                    </noise>
+                  </z>
+                </linear_acceleration>
+              </imu>
+              <pose>0 0 0.01 0 -0 1.5707</pose>
+      </sensor>
+
+
+
+
+
+
+
+
+
+
+    </link>
+    <joint name='left_joint' type='revolute'>
+      <pose relative_to='base_link'>-0.028707 0.12398 -0.32783 0 -0 0</pose>
+      <parent>base_link</parent>
+      <child>left_link</child>
+      <axis>
+        <xyz>2.6e-05 1 -0.000263</xyz>
+        <limit>
+          <effort>1</effort>
+          <velocity>1</velocity>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='left_link'>
+      <pose relative_to='left_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0 -0.019813 -0 0 -0 0</pose>
+        <mass>0.22927</mass>
+        <inertia>
+          <ixx>0.00029401</ixx>
+          <ixy>-4.0767e-21</ixy>
+          <ixz>-1.9921e-20</ixz>
+          <iyy>0.00043465</iyy>
+          <iyz>-5.0517e-21</iyz>
+          <izz>0.00029401</izz>
+        </inertia>
+      </inertial>
+      <collision name='left_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/seho/ros2/test_ws/src/jumpseho/meshes/left_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='left_link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/seho/ros2/test_ws/src/jumpseho/meshes/left_link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='right_join' type='revolute'>
+      <pose relative_to='base_link'>-0.028714 -0.12402 -0.32777 0 -0 0</pose>
+      <parent>base_link</parent>
+      <child>right_link</child>
+      <axis>
+        <xyz>2.6e-05 1 -0.000263</xyz>
+        <limit>
+          <effort>1</effort>
+          <velocity>1</velocity>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='right_link'>
+      <pose relative_to='right_join'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0 0.019813 0 0 -0 0</pose>
+        <mass>0.22927</mass>
+        <inertia>
+          <ixx>0.00029401</ixx>
+          <ixy>3.4207e-19</ixy>
+          <ixz>-1.1511e-20</ixz>
+          <iyy>0.00043465</iyy>
+          <iyz>-1.3676e-19</iyz>
+          <izz>0.00029401</izz>
+        </inertia>
+      </inertial>
+      <collision name='right_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/seho/ros2/test_ws/src/jumpseho/meshes/right_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='right_link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/seho/ros2/test_ws/src/jumpseho/meshes/right_link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+
+
+
+
+    <plugin name='diff_drive' filename='libgazebo_ros_diff_drive.so'>
+      <ros>
+        <namespace>/demo</namespace>
+        <remapping>cmd_vel:=cmd_vel</remapping>
+        <remapping>odom:=odom</remapping>
+      </ros>
+      <left_joint>left_joint</left_joint>
+      <right_joint>right_join</right_joint>
+    
+
+      <max_wheel_torque>100</max_wheel_torque>
+      <max_wheel_acceleration>10.0</max_wheel_acceleration>
+
+      <wheel_separation>0.025</wheel_separation>
+      <wheel_diameter>0.1</wheel_diameter>
+
+ 
+      <publish_odom>true</publish_odom>
+      <publish_odom_tf>true</publish_odom_tf>
+      <publish_wheel_tf>true</publish_wheel_tf>
+
+
+
+      <odometry_frame>odom</odometry_frame>
+      <robot_base_frame>body</robot_base_frame>
+    </plugin>
+
+
+
+
+
+
+
+
+
+
+
+  </model>
+</sdf>
