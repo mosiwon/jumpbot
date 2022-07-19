@@ -22,10 +22,10 @@ def generate_launch_description():
         "GAZEBO_MODEL_PATH": model_path,
     }
 
-    sdf_prefix = ('/home/mosiwon/ros2/ws_jbbot/jumpbot')
+    sdf_prefix = ('/home/mosiwon/ws_jbbot/jumpbot')
     sdf_file = os.path.join(sdf_prefix, "urdf", "jumpbot.sdf")
 
-    world_prefix = ('/home/mosiwon/ros2/ws_jbbot/jumpbot')
+    world_prefix = ('/home/mosiwon/ws_jbbot/jumpbot')
     world_file = os.path.join(world_prefix, "gazebo_world", "seho.world")
 
 
