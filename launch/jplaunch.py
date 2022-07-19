@@ -17,15 +17,15 @@ from ament_index_python.packages import get_package_share_directory
 def generate_launch_description():
     model_path = GazeboRosPaths.get_paths()
 
-    pkg_dir = ('/home/seho/ros2/test_ws/src/jumpseho')
+    pkg_dir = ('/home/mosiwon/ros2/ws_jbbot/jumpbot')
     env = {
         "GAZEBO_MODEL_PATH": model_path,
     }
 
-    sdf_prefix = ('/home/seho/ros2/test_ws/src/jumpseho')
+    sdf_prefix = ('/home/mosiwon/ros2/ws_jbbot/jumpbot')
     sdf_file = os.path.join(sdf_prefix, "urdf", "jumpbot.sdf")
 
-    world_prefix = ('/home/seho/ros2/test_ws/src/jumpseho')
+    world_prefix = ('/home/mosiwon/ros2/ws_jbbot/jumpbot')
     world_file = os.path.join(world_prefix, "gazebo_world", "seho.world")
 
 
