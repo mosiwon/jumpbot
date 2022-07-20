@@ -22,8 +22,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'self_balancing = jbpkg.self_balancing:main',
-            'line_following = jbpkg.line_following:main',
+            'self_balancing = jumpbot.self_balancing:main',
+            'param_pid_node = jumpbot.param_pid_node:main',
             'wall_e = jbpkg.wall_e:main'
         ],
     },

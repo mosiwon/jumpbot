@@ -42,7 +42,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>/home/mosiwon/ws_jbbot/jumpbot/meshes/base_link.STL</uri>
+            <uri>/home/mosiwon/ws_jbbot/jumpbot/meshes/jumpbot/base_link.STL</uri>
           </mesh>
         </geometry>
       </collision>
@@ -87,7 +87,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>/home/mosiwon/ws_jbbot/jumpbot/meshes/base_link.STL</uri>
+            <uri>/home/mosiwon/ws_jbbot/jumpbot/meshes/jumpbot/base_link.STL</uri>
           </mesh>
         </geometry>
       </visual>
@@ -219,7 +219,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>/home/mosiwon/ws_jbbot/jumpbot/meshes/left_link.STL</uri>
+            <uri>/home/mosiwon/ws_jbbot/jumpbot/meshes/jumpbot/left_link.STL</uri>
           </mesh>
         </geometry>
       </collision>
@@ -228,7 +228,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>/home/mosiwon/ws_jbbot/jumpbot/meshes/left_link.STL</uri>
+            <uri>/home/mosiwon/ws_jbbot/jumpbot/meshes/jumpbot/left_link.STL</uri>
           </mesh>
         </geometry>
       </visual>
@@ -270,7 +270,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>/home/mosiwon/ws_jbbot/jumpbot/meshes/right_link.STL</uri>
+            <uri>/home/mosiwon/ws_jbbot/jumpbot/meshes/jumpbot/right_link.STL</uri>
           </mesh>
         </geometry>
       </collision>
@@ -279,7 +279,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>/home/mosiwon/ws_jbbot/jumpbot/meshes/right_link.STL</uri>
+            <uri>/home/mosiwon/ws_jbbot/jumpbot/meshes/jumpbot/right_link.STL</uri>
           </mesh>
         </geometry>
       </visual>
