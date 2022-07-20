@@ -18,13 +18,13 @@ setup(
     maintainer='mosiwon',
     maintainer_email='mosiwon@todo.todo',
     description='TODO: Package description',
-    license='TODO: License declaration',
+    license='TODO: License dec laration',
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
             'self_balancing = jumpbot.self_balancing:main',
             'param_pid_node = jumpbot.param_pid_node:main',
-            'wall_e = jbpkg.wall_e:main'
+            'wall_e = jumpbot.wall_e:main'
         ],
     },
 )

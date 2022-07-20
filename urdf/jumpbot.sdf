@@ -169,7 +169,7 @@
                   </z>
                 </linear_acceleration>
               </imu>
-              <pose>0 0 0.01 0 -0 1.5707</pose>
+              <pose>0 0 0.01 0 0 0</pose>
       </sensor>
 
 
