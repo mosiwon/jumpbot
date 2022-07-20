@@ -23,7 +23,7 @@ def generate_launch_description():
     }
 
     sdf_prefix = ('/home/mosiwon/ws_jbbot/jumpbot')
-    sdf_file = os.path.join(sdf_prefix, "urdf", "jumpbot.sdf")
+    sdf_file = os.path.join(sdf_prefix, "urdf", "jp0720.urdf")
 
     world_prefix = ('/home/mosiwon/ws_jbbot/jumpbot')
     world_file = os.path.join(world_prefix, "gazebo_world", "seho.world")
