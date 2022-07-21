@@ -1,0 +1,41 @@
+digraph G {
+node [shape=box];
+"base_link" [label="base_link"];
+"L_cam_link" [label="L_cam_link"];
+"L_leg2_link" [label="L_leg2_link"];
+"L_leg12_link" [label="L_leg12_link"];
+"L_wheel_link" [label="L_wheel_link"];
+"L_leg3_link" [label="L_leg3_link"];
+"L_leg13_link" [label="L_leg13_link"];
+"R_cam_link" [label="R_cam_link"];
+"R_leg2_link" [label="R_leg2_link"];
+"R_leg12_link" [label="R_leg12_link"];
+"R_wheel_link" [label="R_wheel_link"];
+"R_leg3_link" [label="R_leg3_link"];
+"R_leg13_link" [label="R_leg13_link"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"base_link" -> "L_cam_j" [label="xyz: 0.1066 0.0575 -0.10105 \nrpy: 1.5708 -0.11771 -3.14159"]
+"L_cam_j" -> "L_cam_link"
+"base_link" -> "L_leg2_j" [label="xyz: 0.057125 0.044 -0.135 \nrpy: -1.5708 0.81076 -3.14159"]
+"L_leg2_j" -> "L_leg2_link"
+"L_leg2_link" -> "L_leg12_j" [label="xyz: 0.16464 0.14325 0.024 \nrpy: -3.14159 -4.23516e-22 1.4689"]
+"L_leg12_j" -> "L_leg12_link"
+"L_leg12_link" -> "L_wheel_j" [label="xyz: 0.006 0 0.121 \nrpy: 0 -0 2.2797"]
+"L_wheel_j" -> "L_wheel_link"
+"base_link" -> "L_leg3_j" [label="xyz: 0.02 0.044 -0.097875 \nrpy: 1.5708 0.96228 3.14159"]
+"L_leg3_j" -> "L_leg3_link"
+"L_leg3_link" -> "L_leg13_j" [label="xyz: 0.19362 -0.16844 -0.024 \nrpy: 0 0 -1.3174"]
+"L_leg13_j" -> "L_leg13_link"
+"base_link" -> "R_cam_j" [label="xyz: 0.1066 -0.0575 -0.10105 \nrpy: 1.5708 -0.11771 -3.14159"]
+"R_cam_j" -> "R_cam_link"
+"base_link" -> "R_leg2_j" [label="xyz: 0.057125 -0.044 -0.135 \nrpy: 1.5708 0.81076 3.14159"]
+"R_leg2_j" -> "R_leg2_link"
+"R_leg2_link" -> "R_leg12_j" [label="xyz: 0.16464 -0.14325 0.024 \nrpy: 0 0 -1.4689"]
+"R_leg12_j" -> "R_leg12_link"
+"R_leg12_link" -> "R_wheel_j" [label="xyz: 0.006 0 -0.121 \nrpy: 0 -0 2.2797"]
+"R_wheel_j" -> "R_wheel_link"
+"base_link" -> "R_leg3_j" [label="xyz: 0.02 -0.044 -0.097875 \nrpy: -1.5708 0.96228 -3.14159"]
+"R_leg3_j" -> "R_leg3_link"
+"R_leg3_link" -> "R_leg13_j" [label="xyz: 0.19362 0.16844 -0.024 \nrpy: -3.14159 8.47033e-22 1.3174"]
+"R_leg13_j" -> "R_leg13_link"
+}

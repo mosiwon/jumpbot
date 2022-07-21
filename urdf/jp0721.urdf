@@ -1,0 +1,841 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="jp0721">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.0825150681288514 -1.26961287633121E-06 -0.0625248801734693"
+        rpy="0 0 0" />
+      <mass
+        value="0.908617772507298" />
+      <inertia
+        ixx="0.00125334372703637"
+        ixy="4.5377019288171E-08"
+        ixz="1.4693857229775E-05"
+        iyy="0.00191127647458126"
+        iyz="4.01250594897109E-09"
+        izz="0.00148224888570072" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/mosiwon/ws_jbbot/jumpbot/meshes/jp0721/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.698039215686274 0.698039215686274 0.698039215686274 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/mosiwon/ws_jbbot/jumpbot/meshes/jp0721/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="L_cam_link">
+    <inertial>
+      <origin
+        xyz="0.00764151581949032 0.0102416228422385 0.00633684995597522"
+        rpy="0 0 0" />
+      <mass
+        value="0.0305719559896349" />
+      <inertia
+        ixx="5.85643000879998E-06"
+        ixy="-6.80455793104055E-07"
+        ixz="-3.83166777733683E-08"
+        iyy="1.69441039360323E-05"
+        iyz="-5.10742835221565E-08"
+        izz="2.19377166690398E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/mosiwon/ws_jbbot/jumpbot/meshes/jp0721/L_cam_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.698039215686274 0.698039215686274 0.698039215686274 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/mosiwon/ws_jbbot/jumpbot/meshes/jp0721/L_cam_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L_cam_j"
+    type="revolute">
+    <origin
+      xyz="0.1066 0.0575 -0.10105"
+      rpy="1.5708 -0.11771 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="L_cam_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="R_cam_link">
+    <inertial>
+      <origin
+        xyz="0.00764151571778698 0.0102416229181905 -0.00633667575256724"
+        rpy="0 0 0" />
+      <mass
+        value="0.0305719559896348" />
+      <inertia
+        ixx="5.85630719020196E-06"
+        ixy="-6.8101903154658E-07"
+        ixz="3.81186904209616E-08"
+        iyy="1.69432935249714E-05"
+        iyz="5.11137140207275E-08"
+        izz="2.19368248352234E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/mosiwon/ws_jbbot/jumpbot/meshes/jp0721/R_cam_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.698039215686274 0.698039215686274 0.698039215686274 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/mosiwon/ws_jbbot/jumpbot/meshes/jp0721/R_cam_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="R_cam_j"
+    type="revolute">
+    <origin
+      xyz="0.1066 -0.0575 -0.10105"
+      rpy="1.5708 -0.11771 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="R_cam_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="L_leg3_link">
+    <inertial>
+      <origin
+        xyz="0.0873324965817253 0.0110677958699352 0.0200000000000002"
+        rpy="0 0 0" />
+      <mass
+        value="0.0987705837921801" />
+      <inertia
+        ixx="1.18250822598191E-05"
+        ixy="-7.93031983110537E-06"
+        ixz="-2.85912269937039E-20"
+        iyy="0.00020074313006863"
+        iyz="-6.52963822728711E-22"
+        izz="0.000205071197874886" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/mosiwon/ws_jbbot/jumpbot/meshes/jp0721/L_leg3_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/mosiwon/ws_jbbot/jumpbot/meshes/jp0721/L_leg3_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L_leg3_j"
+    type="revolute">
+    <origin
+      xyz="0.02 0.044 -0.097875"
+      rpy="1.5708 0.96228 -3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="L_leg3_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="L_leg13_link">
+    <inertial>
+      <origin
+        xyz="-0.0522667236666958 5.68295410730002E-15 0.0422856505225773"
+        rpy="0 0 0" />
+      <mass
+        value="0.2641287819222" />
+      <inertia
+        ixx="8.07606610309246E-05"
+        ixy="3.35237240040985E-18"
+        ixz="-3.78275280217768E-06"
+        iyy="0.000771573835287757"
+        iyz="6.89192874747816E-20"
+        izz="0.000775155606049069" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/mosiwon/ws_jbbot/jumpbot/meshes/jp0721/L_leg13_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/mosiwon/ws_jbbot/jumpbot/meshes/jp0721/L_leg13_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L_leg13_j"
+    type="revolute">
+    <origin
+      xyz="0.19362 -0.16844 -0.024"
+      rpy="0 0 -1.3174" />
+    <parent
+      link="L_leg3_link" />
+    <child
+      link="L_leg13_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="R_leg3_link">
+    <inertial>
+      <origin
+        xyz="0.0873324965816861 -0.0110677958700172 0.02"
+        rpy="0 0 0" />
+      <mass
+        value="0.0987705837921801" />
+      <inertia
+        ixx="1.18250822598668E-05"
+        ixy="7.93031983167288E-06"
+        ixz="-1.88585553300237E-19"
+        iyy="0.000200743130068583"
+        iyz="1.26152383250589E-20"
+        izz="0.000205071197874887" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/mosiwon/ws_jbbot/jumpbot/meshes/jp0721/R_leg3_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/mosiwon/ws_jbbot/jumpbot/meshes/jp0721/R_leg3_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="R_leg3_j"
+    type="revolute">
+    <origin
+      xyz="0.02 -0.044 -0.097875"
+      rpy="-1.5708 0.96228 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="R_leg3_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="R_leg13_link">
+    <inertial>
+      <origin
+        xyz="-0.0522667236666051 -6.15167639050895E-14 -0.0422856505225778"
+        rpy="0 0 0" />
+      <mass
+        value="0.264128781922199" />
+      <inertia
+        ixx="8.07606610309193E-05"
+        ixy="3.76989521640772E-17"
+        ixz="3.78275280217763E-06"
+        iyy="0.000771573835287757"
+        iyz="-1.04875497522522E-19"
+        izz="0.000775155606049064" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/mosiwon/ws_jbbot/jumpbot/meshes/jp0721/R_leg13_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/mosiwon/ws_jbbot/jumpbot/meshes/jp0721/R_leg13_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="R_leg13_j"
+    type="revolute">
+    <origin
+      xyz="0.19362 0.16844 -0.024"
+      rpy="3.1416 0 1.3174" />
+    <parent
+      link="R_leg3_link" />
+    <child
+      link="R_leg13_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="L_leg2_link">
+    <inertial>
+      <origin
+        xyz="0.0515860704389703 0.0121605401195312 -0.02"
+        rpy="0 0 0" />
+      <mass
+        value="0.167812072864465" />
+      <inertia
+        ixx="2.97990665719628E-05"
+        ixy="1.83054843130183E-05"
+        ixz="-3.88512566850253E-20"
+        iyy="0.000213413033338274"
+        iyz="3.04116562808805E-21"
+        izz="0.000231043613834266" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/mosiwon/ws_jbbot/jumpbot/meshes/jp0721/L_leg2_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/mosiwon/ws_jbbot/jumpbot/meshes/jp0721/L_leg2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L_leg2_j"
+    type="revolute">
+    <origin
+      xyz="0.057125 0.044 -0.135"
+      rpy="-1.5708 0.81076 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="L_leg2_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="L_leg12_link">
+    <inertial>
+      <origin
+        xyz="-0.0522667236666959 5.71070968291565E-15 0.0422856505225773"
+        rpy="0 0 0" />
+      <mass
+        value="0.2641287819222" />
+      <inertia
+        ixx="8.07606610309247E-05"
+        ixy="3.41335877261216E-18"
+        ixz="-3.78275280217769E-06"
+        iyy="0.000771573835287757"
+        iyz="7.27309357374259E-20"
+        izz="0.000775155606049069" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/mosiwon/ws_jbbot/jumpbot/meshes/jp0721/L_leg12_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/mosiwon/ws_jbbot/jumpbot/meshes/jp0721/L_leg12_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L_leg12_j"
+    type="revolute">
+    <origin
+      xyz="0.16464 0.14325 0.024"
+      rpy="3.1416 0 1.4689" />
+    <parent
+      link="L_leg2_link" />
+    <child
+      link="L_leg12_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="L_wheel_link">
+    <inertial>
+      <origin
+        xyz="1.33226762955019E-15 1.19348975147204E-14 -0.0130142409513504"
+        rpy="0 0 0" />
+      <mass
+        value="0.160038795838917" />
+      <inertia
+        ixx="0.000111683206400885"
+        ixy="1.31804461139968E-20"
+        ixz="6.56991792479027E-20"
+        iyy="0.000111683206400885"
+        iyz="-3.9428184617788E-20"
+        izz="0.000190736255302453" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/mosiwon/ws_jbbot/jumpbot/meshes/jp0721/L_wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/mosiwon/ws_jbbot/jumpbot/meshes/jp0721/L_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L_wheel_j"
+    type="revolute">
+    <origin
+      xyz="0.006 0 0.121"
+      rpy="0 0 2.2797" />
+    <parent
+      link="L_leg12_link" />
+    <child
+      link="L_wheel_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="R_leg2_link">
+    <inertial>
+      <origin
+        xyz="0.0515860704389932 -0.0121605401195769 -0.0200000000000025"
+        rpy="0 0 0" />
+      <mass
+        value="0.167812072864465" />
+      <inertia
+        ixx="2.97990665719972E-05"
+        ixy="-1.83054843131895E-05"
+        ixz="-7.32477893212545E-20"
+        iyy="0.000213413033338239"
+        iyz="-5.67866998033845E-20"
+        izz="0.000231043613834266" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/mosiwon/ws_jbbot/jumpbot/meshes/jp0721/R_leg2_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/mosiwon/ws_jbbot/jumpbot/meshes/jp0721/R_leg2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="R_leg2_j"
+    type="revolute">
+    <origin
+      xyz="0.057125 -0.044 -0.135"
+      rpy="1.5708 0.81076 -3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="R_leg2_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="R_leg12_link">
+    <inertial>
+      <origin
+        xyz="-0.0522667236666051 -6.14890083294739E-14 -0.0422856505225778"
+        rpy="0 0 0" />
+      <mass
+        value="0.264128781922199" />
+      <inertia
+        ixx="8.07606610309194E-05"
+        ixy="3.77599385362795E-17"
+        ixz="3.78275280217762E-06"
+        iyy="0.000771573835287757"
+        iyz="-1.02228519562352E-19"
+        izz="0.000775155606049064" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/mosiwon/ws_jbbot/jumpbot/meshes/jp0721/R_leg12_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/mosiwon/ws_jbbot/jumpbot/meshes/jp0721/R_leg12_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="R_leg12_j"
+    type="revolute">
+    <origin
+      xyz="0.16464 -0.14325 0.024"
+      rpy="0 0 -1.4689" />
+    <parent
+      link="R_leg2_link" />
+    <child
+      link="R_leg12_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="R_wheel_link">
+    <inertial>
+      <origin
+        xyz="-1.25732757538799E-14 -1.13631326570385E-13 0.0130142409513502"
+        rpy="0 0 0" />
+      <mass
+        value="0.160038795838917" />
+      <inertia
+        ixx="0.000111683206400885"
+        ixy="1.70932986977747E-20"
+        ixz="3.25984688885876E-20"
+        iyy="0.000111683206400885"
+        iyz="-3.3588085459838E-20"
+        izz="0.000190736255302452" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/mosiwon/ws_jbbot/jumpbot/meshes/jp0721/R_wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/mosiwon/ws_jbbot/jumpbot/meshes/jp0721/R_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="R_wheel_j"
+    type="revolute">
+    <origin
+      xyz="0.006 0 -0.121"
+      rpy="0 0 2.2797" />
+    <parent
+      link="R_leg12_link" />
+    <child
+      link="R_wheel_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+
+  <gazebo reference="imu_link">
+    <sensor name="imu_sensor" type="imu">
+      <plugin filename="libgazebo_ros_imu_sensor.so" name="imu_plugin">
+        <ros>
+          <namespace>/demo</namespace>
+          <remapping>~/out:=imu</remapping>
+        </ros>
+        <initial_orientation_as_reference>false</initial_orientation_as_reference>
+      </plugin>
+      <always_on>true</always_on>
+      <update_rate>100</update_rate>
+      <visualize>true</visualize>
+      <imu>
+        <angular_velocity>
+          <x>
+            <noise type="gaussian">
+              <mean>0.0</mean>
+              <stddev>2e-4</stddev>
+              <bias_mean>0.0000075</bias_mean>
+              <bias_stddev>0.0000008</bias_stddev>
+            </noise>
+          </x>
+          <y>
+            <noise type="gaussian">
+              <mean>0.0</mean>
+              <stddev>2e-4</stddev>
+              <bias_mean>0.0000075</bias_mean>
+              <bias_stddev>0.0000008</bias_stddev>
+            </noise>
+          </y>
+          <z>
+            <noise type="gaussian">
+              <mean>0.0</mean>
+              <stddev>2e-4</stddev>
+              <bias_mean>0.0000075</bias_mean>
+              <bias_stddev>0.0000008</bias_stddev>
+            </noise>
+          </z>
+        </angular_velocity>
+        <linear_acceleration>
+          <x>
+            <noise type="gaussian">
+              <mean>0.0</mean>
+              <stddev>1.7e-2</stddev>
+              <bias_mean>0.1</bias_mean>
+              <bias_stddev>0.001</bias_stddev>
+            </noise>
+          </x>
+          <y>
+            <noise type="gaussian">
+              <mean>0.0</mean>
+              <stddev>1.7e-2</stddev>
+              <bias_mean>0.1</bias_mean>
+              <bias_stddev>0.001</bias_stddev>
+            </noise>
+          </y>
+          <z>
+            <noise type="gaussian">
+              <mean>0.0</mean>
+              <stddev>1.7e-2</stddev>
+              <bias_mean>0.1</bias_mean>
+              <bias_stddev>0.001</bias_stddev>
+            </noise>
+          </z>
+        </linear_acceleration>
+      </imu>
+    </sensor>
+  </gazebo>
+
+
+  <gazebo>
+    <plugin name='diff_drive' filename='libgazebo_ros_diff_drive.so'>
+      <ros>
+        <namespace>/demo</namespace>
+      </ros>
+
+      <!-- wheels -->
+      <left_joint>L_cam_j</left_joint>
+      <right_joint>R_cam_j</right_joint>
+
+      <!-- kinematics -->
+      <wheel_separation>0.025</wheel_separation>
+      <wheel_diameter>0.2</wheel_diameter>
+
+      <!-- limits -->
+      <max_wheel_torque>80</max_wheel_torque>
+      <max_wheel_acceleration>4.0</max_wheel_acceleration>
+
+      <!-- output -->
+      <publish_odom>true</publish_odom>
+      <publish_odom_tf>true</publish_odom_tf>
+      <publish_wheel_tf>true</publish_wheel_tf>
+
+      <odometry_frame>odom</odometry_frame>
+      <robot_base_frame>base_link</robot_base_frame>
+    </plugin>
+  </gazebo>
+</robot>

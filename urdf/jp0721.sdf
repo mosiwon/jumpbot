@@ -1,0 +1,666 @@
+<?xml version="1.0" ?>
+<sdf version='1.7'>
+  <model name='jp0721'>
+    <link name='base_link'>
+      <inertial>
+        <pose>0.082515 -1e-06 -0.062525 0 -0 0</pose>
+        <mass>0.908618</mass>
+        <inertia>
+          <ixx>0.00125334</ixx>
+          <ixy>4.5377e-08</ixy>
+          <ixz>1.46939e-05</ixz>
+          <iyy>0.00191128</iyy>
+          <iyz>4.01251e-09</iyz>
+          <izz>0.00148225</izz>
+        </inertia>
+      </inertial>
+      <collision name='base_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/mosiwon/ws_jbbot/jumpbot/meshes/jp0721/base_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='base_link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/mosiwon/ws_jbbot/jumpbot/meshes/jp0721/base_link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='L_cam_j' type='revolute'>
+      <pose relative_to='base_link'>0.1066 0.0575 -0.10105 1.5708 -0.11771 -3.14159</pose>
+      <parent>base_link</parent>
+      <child>L_cam_link</child>
+      <axis>
+        <xyz>0 0 -1</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+          <effort>0</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='L_cam_link'>
+      <pose relative_to='L_cam_j'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.007642 0.010242 0.006337 0 -0 0</pose>
+        <mass>0.030572</mass>
+        <inertia>
+          <ixx>5.85643e-06</ixx>
+          <ixy>-6.80456e-07</ixy>
+          <ixz>-3.83167e-08</ixz>
+          <iyy>1.69441e-05</iyy>
+          <iyz>-5.10743e-08</iyz>
+          <izz>2.19377e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='L_cam_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/mosiwon/ws_jbbot/jumpbot/meshes/jp0721/L_cam_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='L_cam_link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/mosiwon/ws_jbbot/jumpbot/meshes/jp0721/L_cam_link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='L_leg2_j' type='revolute'>
+      <pose relative_to='base_link'>0.057125 0.044 -0.135 -1.5708 0.81076 -3.14159</pose>
+      <parent>base_link</parent>
+      <child>L_leg2_link</child>
+      <axis>
+        <xyz>0 0 -1</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+          <effort>0</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='L_leg2_link'>
+      <pose relative_to='L_leg2_j'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.051586 0.012161 -0.02 0 -0 0</pose>
+        <mass>0.167812</mass>
+        <inertia>
+          <ixx>2.97991e-05</ixx>
+          <ixy>1.83055e-05</ixy>
+          <ixz>-3.88513e-20</ixz>
+          <iyy>0.000213413</iyy>
+          <iyz>3.04117e-21</iyz>
+          <izz>0.000231044</izz>
+        </inertia>
+      </inertial>
+      <collision name='L_leg2_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/mosiwon/ws_jbbot/jumpbot/meshes/jp0721/L_leg2_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='L_leg2_link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/mosiwon/ws_jbbot/jumpbot/meshes/jp0721/L_leg2_link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='L_leg12_j' type='revolute'>
+      <pose relative_to='L_leg2_link'>0.16464 0.14325 0.024 -3.14159 -0 1.4689</pose>
+      <parent>L_leg2_link</parent>
+      <child>L_leg12_link</child>
+      <axis>
+        <xyz>0 0 -1</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+          <effort>0</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='L_leg12_link'>
+      <pose relative_to='L_leg12_j'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0.052267 0 0.042286 0 -0 0</pose>
+        <mass>0.264129</mass>
+        <inertia>
+          <ixx>8.07607e-05</ixx>
+          <ixy>3.41336e-18</ixy>
+          <ixz>-3.78275e-06</ixz>
+          <iyy>0.000771574</iyy>
+          <iyz>7.27309e-20</iyz>
+          <izz>0.000775156</izz>
+        </inertia>
+      </inertial>
+      <collision name='L_leg12_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/mosiwon/ws_jbbot/jumpbot/meshes/jp0721/L_leg12_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='L_leg12_link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/mosiwon/ws_jbbot/jumpbot/meshes/jp0721/L_leg12_link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='L_wheel_j' type='revolute'>
+      <pose relative_to='L_leg12_link'>0.006 0 0.121 0 -0 2.2797</pose>
+      <parent>L_leg12_link</parent>
+      <child>L_wheel_link</child>
+      <axis>
+        <xyz>0 0 -1</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+          <effort>0</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='L_wheel_link'>
+      <pose relative_to='L_wheel_j'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 -0.013014 0 -0 0</pose>
+        <mass>0.160039</mass>
+        <inertia>
+          <ixx>0.000111683</ixx>
+          <ixy>1.31804e-20</ixy>
+          <ixz>6.56992e-20</ixz>
+          <iyy>0.000111683</iyy>
+          <iyz>-3.94282e-20</iyz>
+          <izz>0.000190736</izz>
+        </inertia>
+      </inertial>
+      <collision name='L_wheel_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/mosiwon/ws_jbbot/jumpbot/meshes/jp0721/L_wheel_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='L_wheel_link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/mosiwon/ws_jbbot/jumpbot/meshes/jp0721/L_wheel_link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='L_leg3_j' type='revolute'>
+      <pose relative_to='base_link'>0.02 0.044 -0.097875 1.5708 0.96228 3.14159</pose>
+      <parent>base_link</parent>
+      <child>L_leg3_link</child>
+      <axis>
+        <xyz>0 0 -1</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+          <effort>0</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='L_leg3_link'>
+      <pose relative_to='L_leg3_j'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.087332 0.011068 0.02 0 -0 0</pose>
+        <mass>0.0987706</mass>
+        <inertia>
+          <ixx>1.18251e-05</ixx>
+          <ixy>-7.93032e-06</ixy>
+          <ixz>-2.85912e-20</ixz>
+          <iyy>0.000200743</iyy>
+          <iyz>-6.52964e-22</iyz>
+          <izz>0.000205071</izz>
+        </inertia>
+      </inertial>
+      <collision name='L_leg3_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/mosiwon/ws_jbbot/jumpbot/meshes/jp0721/L_leg3_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='L_leg3_link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/mosiwon/ws_jbbot/jumpbot/meshes/jp0721/L_leg3_link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='L_leg13_j' type='revolute'>
+      <pose relative_to='L_leg3_link'>0.19362 -0.16844 -0.024 0 0 -1.3174</pose>
+      <parent>L_leg3_link</parent>
+      <child>L_leg13_link</child>
+      <axis>
+        <xyz>0 0 -1</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+          <effort>0</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='L_leg13_link'>
+      <pose relative_to='L_leg13_j'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0.052267 0 0.042286 0 -0 0</pose>
+        <mass>0.264129</mass>
+        <inertia>
+          <ixx>8.07607e-05</ixx>
+          <ixy>3.35237e-18</ixy>
+          <ixz>-3.78275e-06</ixz>
+          <iyy>0.000771574</iyy>
+          <iyz>6.89193e-20</iyz>
+          <izz>0.000775156</izz>
+        </inertia>
+      </inertial>
+      <collision name='L_leg13_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/mosiwon/ws_jbbot/jumpbot/meshes/jp0721/L_leg13_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='L_leg13_link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/mosiwon/ws_jbbot/jumpbot/meshes/jp0721/L_leg13_link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='R_cam_j' type='revolute'>
+      <pose relative_to='base_link'>0.1066 -0.0575 -0.10105 1.5708 -0.11771 -3.14159</pose>
+      <parent>base_link</parent>
+      <child>R_cam_link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+          <effort>0</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='R_cam_link'>
+      <pose relative_to='R_cam_j'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.007642 0.010242 -0.006337 0 -0 0</pose>
+        <mass>0.030572</mass>
+        <inertia>
+          <ixx>5.85631e-06</ixx>
+          <ixy>-6.81019e-07</ixy>
+          <ixz>3.81187e-08</ixz>
+          <iyy>1.69433e-05</iyy>
+          <iyz>5.11137e-08</iyz>
+          <izz>2.19368e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='R_cam_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/mosiwon/ws_jbbot/jumpbot/meshes/jp0721/R_cam_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='R_cam_link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/mosiwon/ws_jbbot/jumpbot/meshes/jp0721/R_cam_link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='R_leg2_j' type='revolute'>
+      <pose relative_to='base_link'>0.057125 -0.044 -0.135 1.5708 0.81076 3.14159</pose>
+      <parent>base_link</parent>
+      <child>R_leg2_link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+          <effort>0</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='R_leg2_link'>
+      <pose relative_to='R_leg2_j'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.051586 -0.012161 -0.02 0 -0 0</pose>
+        <mass>0.167812</mass>
+        <inertia>
+          <ixx>2.97991e-05</ixx>
+          <ixy>-1.83055e-05</ixy>
+          <ixz>-7.32478e-20</ixz>
+          <iyy>0.000213413</iyy>
+          <iyz>-5.67867e-20</iyz>
+          <izz>0.000231044</izz>
+        </inertia>
+      </inertial>
+      <collision name='R_leg2_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/mosiwon/ws_jbbot/jumpbot/meshes/jp0721/R_leg2_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='R_leg2_link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/mosiwon/ws_jbbot/jumpbot/meshes/jp0721/R_leg2_link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='R_leg12_j' type='revolute'>
+      <pose relative_to='R_leg2_link'>0.16464 -0.14325 0.024 0 0 -1.4689</pose>
+      <parent>R_leg2_link</parent>
+      <child>R_leg12_link</child>
+      <axis>
+        <xyz>0 0 -1</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+          <effort>0</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='R_leg12_link'>
+      <pose relative_to='R_leg12_j'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0.052267 -0 -0.042286 0 -0 0</pose>
+        <mass>0.264129</mass>
+        <inertia>
+          <ixx>8.07607e-05</ixx>
+          <ixy>3.77599e-17</ixy>
+          <ixz>3.78275e-06</ixz>
+          <iyy>0.000771574</iyy>
+          <iyz>-1.02229e-19</iyz>
+          <izz>0.000775156</izz>
+        </inertia>
+      </inertial>
+      <collision name='R_leg12_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/mosiwon/ws_jbbot/jumpbot/meshes/jp0721/R_leg12_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='R_leg12_link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/mosiwon/ws_jbbot/jumpbot/meshes/jp0721/R_leg12_link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='R_wheel_j' type='revolute'>
+      <pose relative_to='R_leg12_link'>0.006 0 -0.121 0 -0 2.2797</pose>
+      <parent>R_leg12_link</parent>
+      <child>R_wheel_link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+          <effort>0</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='R_wheel_link'>
+      <pose relative_to='R_wheel_j'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0 -0 0.013014 0 -0 0</pose>
+        <mass>0.160039</mass>
+        <inertia>
+          <ixx>0.000111683</ixx>
+          <ixy>1.70933e-20</ixy>
+          <ixz>3.25985e-20</ixz>
+          <iyy>0.000111683</iyy>
+          <iyz>-3.35881e-20</iyz>
+          <izz>0.000190736</izz>
+        </inertia>
+      </inertial>
+      <collision name='R_wheel_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/mosiwon/ws_jbbot/jumpbot/meshes/jp0721/R_wheel_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='R_wheel_link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/mosiwon/ws_jbbot/jumpbot/meshes/jp0721/R_wheel_link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='R_leg3_j' type='revolute'>
+      <pose relative_to='base_link'>0.02 -0.044 -0.097875 -1.5708 0.96228 -3.14159</pose>
+      <parent>base_link</parent>
+      <child>R_leg3_link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+          <effort>0</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='R_leg3_link'>
+      <pose relative_to='R_leg3_j'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.087332 -0.011068 0.02 0 -0 0</pose>
+        <mass>0.0987706</mass>
+        <inertia>
+          <ixx>1.18251e-05</ixx>
+          <ixy>7.93032e-06</ixy>
+          <ixz>-1.88586e-19</ixz>
+          <iyy>0.000200743</iyy>
+          <iyz>1.26152e-20</iyz>
+          <izz>0.000205071</izz>
+        </inertia>
+      </inertial>
+      <collision name='R_leg3_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/mosiwon/ws_jbbot/jumpbot/meshes/jp0721/R_leg3_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='R_leg3_link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/mosiwon/ws_jbbot/jumpbot/meshes/jp0721/R_leg3_link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='R_leg13_j' type='revolute'>
+      <pose relative_to='R_leg3_link'>0.19362 0.16844 -0.024 -3.14159 0 1.3174</pose>
+      <parent>R_leg3_link</parent>
+      <child>R_leg13_link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+          <effort>0</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='R_leg13_link'>
+      <pose relative_to='R_leg13_j'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0.052267 -0 -0.042286 0 -0 0</pose>
+        <mass>0.264129</mass>
+        <inertia>
+          <ixx>8.07607e-05</ixx>
+          <ixy>3.7699e-17</ixy>
+          <ixz>3.78275e-06</ixz>
+          <iyy>0.000771574</iyy>
+          <iyz>-1.04875e-19</iyz>
+          <izz>0.000775156</izz>
+        </inertia>
+      </inertial>
+      <collision name='R_leg13_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/mosiwon/ws_jbbot/jumpbot/meshes/jp0721/R_leg13_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='R_leg13_link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/mosiwon/ws_jbbot/jumpbot/meshes/jp0721/R_leg13_link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <static>0</static>
+    <plugin name='diff_drive' filename='libgazebo_ros_diff_drive.so'>
+      <ros>
+        <namespace>/demo</namespace>
+      </ros>
+      <left_joint>L_wheel_j</left_joint>
+      <right_joint>R_wheel_j</right_joint>
+      <wheel_separation>0.025</wheel_separation>
+      <wheel_diameter>0.2</wheel_diameter>
+      <max_wheel_torque>80</max_wheel_torque>
+      <max_wheel_acceleration>4.0</max_wheel_acceleration>
+      <publish_odom>1</publish_odom>
+      <publish_odom_tf>1</publish_odom_tf>
+      <publish_wheel_tf>1</publish_wheel_tf>
+      <odometry_frame>odom</odometry_frame>
+      <robot_base_frame>base_link</robot_base_frame>
+    </plugin>
+  </model>
+</sdf>

@@ -24,7 +24,8 @@ setup(
         'console_scripts': [
             'self_balancing = jumpbot.self_balancing:main',
             'param_pid_node = jumpbot.param_pid_node:main',
-            'wall_e = jumpbot.wall_e:main'
+            'pidcontrol = jumpbot.pidcontrol:main',
+            'SelfBalance = jumpbot.SelfBalance:main',  
         ],
     },
 )

@@ -27,7 +27,7 @@
     <link name='base_link'>
       <inertial>
         <pose>-0.034481 -1.7e-05 -0.138023 0 -0 0</pose>
-        <mass>2.06581</mass>
+        <mass>0.11881</mass>
         <inertia>
           <ixx>0.00261912</ixx>
           <ixy>4.15999e-08</ixy>
@@ -299,11 +299,11 @@
       <right_joint>right_join</right_joint>
     
 
-      <max_wheel_torque>100</max_wheel_torque>
+      <max_wheel_torque>10</max_wheel_torque>
       <max_wheel_acceleration>10.0</max_wheel_acceleration>
 
-      <wheel_separation>0.025</wheel_separation>
-      <wheel_diameter>0.1</wheel_diameter>
+      <wheel_separation>0.175</wheel_separation>
+      <wheel_diameter>0.0632</wheel_diameter>
 
  
       <publish_odom>true</publish_odom>
